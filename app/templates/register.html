@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="static/css/header.css">
+        <link rel="stylesheet" href="static/css/head_nav.css">
+        <link rel="stylesheet" href="static/css/form.css">
+        <link rel="shortcut icon" type="image/png" href="static/img/appicon2.png">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+        </style>
+    </head>
+    <body>
+        <div class="loader" >
+            <div class="loader-inner">
+                <div class="circle"></div>
+            </div>
+        </div>
+        <div class = 'd-flex justify-content-between'>
+        <header class="header row-mx-auto">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <nav class="header__menu mobile-menu">
+                            <ul>
+                                <li><a href="">Home</a></li>
+                                <li><a href="/about">About</a></li>
+                                <li><a href="/login">Login</a></li>
+                                <li class="active"><a href="/register">Register</a></li>
+                                <li><a href="/adddoctor">Add Doctor Details</a></li>
+								<li><a href="/prediction" hidden>Prediction</a>
+                            </ul>
+                        </nav>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+			<div class="row justify-content-center ">
+				<div class="col-md-8 h-150 col-lg-8 mt-80">
+					<div class="wrap d-md-flex">
+						<div class="text-wrap p-4 p-lg-5 text-center d-flex align-items-center order-md-last">
+							<div class="text w-100">
+								<h2>Welcome to SignUp</h2>
+								<p>Already Have an Account?</p>
+								<a href="{% url 'login' %}" class="btn btn-white btn-outline-white">Login</a>
+							</div>
+			      </div>
+						<div class="login-wrap p-4 p-lg-5">
+			      	<div class="d-flex">
+			      		<div class="w-100">
+			      			<h3 class="mb-4">Sign In</h3>
+			      		</div>
+			      	</div>
+							<form action="{% url 'register' %}" method="post" class="signin-form">
+								{% csrf_token %}
+			      		<div class="form-group mb-3">
+			      			<label class="label" for="email">Email</label>
+			      			<input type="text" name="useremail" id="email" class="form-control" placeholder="Please Enter Email" required>
+			      		</div>
+		            <div class="form-group mb-3">
+		            	<label class="label" for="psw">Password</label>
+		              <input type="password" name="psw" id="psw" class="form-control" placeholder="Password" required>
+		            </div>
+                    <div class="form-group mb-3">
+		            	<label class="label" for="psw-repeat">Re-enter Password</label>
+		              <input type="password" class="form-control"  name="conpassword" id="psw-repeat" placeholder="Password" required>
+		            </div>
+		            <div class="form-group">
+		            	<button type="submit" class="form-control btn btn-primary submit px-3">Sign Up</button>
+		            </div>
+		          </form>
+		        </div>
+				</div>
+			</div>
+        </div>
+    <script src="static/js/jquery-1.11.3.min.js"></script>
+	<script src="static/bootstrap/js/bootstrap.min.js"></script>
+	<script src="static/js/jquery.countdown.js"></script>
+	<script src="static/js/jquery.isotope-3.0.6.min.js"></script>
+	<script src="static/js/waypoints.js"></script>
+	<script src="static/js/owl.carousel.min.js"></script>
+	<script src="static/js/jquery.magnific-popup.min.js"></script>
+	<script src="static/js/jquery.meanmenu.min.js"></script>
+	<script src="static/js/sticker.js"></script>
+	<script src="static/js/main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </body>
+</html>

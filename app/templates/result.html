@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="static/css/header.css">
+        <link rel="stylesheet" href="static/css/head_nav.css">
+        <link rel="stylesheet" href="static/css/form.css">
+        <link rel="shortcut icon" type="image/png" href="static/img/appicon2.png">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" />
+  
+        <style>
+			.v-divider{
+				margin-left:5px;
+				margin-right:5px;
+				width:5px;
+				height:100%;
+				border-left:1px solid grey;
+			   }
+		</style>
+    </head>
+    <body>
+        <div class="loader" >
+            <div class="loader-inner">
+                <div class="circle"></div>
+            </div>
+        </div>
+        <div class = 'd-flex justify-content-between'>
+        <header class="header row-mx-auto">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <nav class="header__menu mobile-menu">
+                            <ul>
+								<!-- <li><a href="/">Home</a> -->
+									
+									<li><a href="/upload">Upload</a></li>
+									<li><a href="/about">Log Out</a></li>
+									<li><a href="/prediction" hidden>Prediction</a>
+                            </ul>
+                        </nav>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+			<div class=" justify-content-center text-center">
+				<div class="col">
+
+					<img src="{{path}}" class="box-img" alt="" style="width: 300px; height: 300px;padding-top:100px">
+					<h1 style="padding: 6px;">
+						The PBS image shows that the ALL is in it's {{message}} stage
+					</h1>
+					<a href="/stages" class="btn btn-primary" style="border: 1px black;background: black;padding: 9px;border-radius: 5px;color: white;text-decoration: none;">Predict again</a>
+				</div>
+			</br>
+				<div class ='v-divider'></div>
+				<!-- <div class="col h-100 overflow-scroll" style="margin:auto;padding-top:60px;">
+					{% for i in DOC %}
+					<div class="card" style="width:400px">
+						<div class="card-body">
+							<p style="margin-bottom: 0px;">Name: {{i.dname}}</p>
+							<p style="margin-bottom: 0px;">Email ID: {{i.demail}}</p>
+							<p style="margin-bottom: 0px;">Contact Number: {{i.dphone}}</p>
+							<p style="margin-bottom: 0px;">Address: {{i.daddress}}</p>
+							<br>
+						</div>
+					  </div>
+					{% endfor %}
+				</div> -->
+				<div class="col h-100 overflow-scroll" style="margin:auto;padding-top:60px;">
+					<section id="testimonials" class="p-4 bg-secondary text-white">
+					  <div class="container">
+						<h2 class="text-center">Doctors</h2>
+						<div class="row text-center text-white">
+						  <div class="col">
+							<div class="slider ">
+							  
+								{% for i in DOC %}
+								<div class="text-white">
+								<blockquote class="blockquote">
+										 <!--  <div class="card" style="width:400px">
+								  <div class="card-body"> -->
+												  <p class="text-white" style="margin-bottom: 0px;">Name: {{i.dname}}</p>
+												  <p class="text-white" style="margin-bottom: 0px;">Email ID: {{i.demail}}</p>
+												  <p class="text-white" style="margin-bottom: 0px;">Contact Number: {{i.dphone}}</p>
+												  <p class="text-white" style="margin-bottom: 0px;">Address: {{i.daddress}}</p>
+												  <br>
+											  <!-- </div>
+											</div> -->
+								  </blockquote>
+								  </div>
+										  {% endfor %}							
+		  
+								
+							  
+							</div>
+						  </div>
+						</div>
+					  </div>
+					</section>
+					</div>    
+				
+        </div>
+		<script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.js"></script>
+  
+
+  <script>
+    // Get the current year for the copyright
+    $('#year').text(new Date().getFullYear());
+
+    $('.slider').slick({
+      infinite: true,
+      slideToShow: 1,
+      slideToScroll: 1
+    });
+  </script>
+    <script src="static/js/jquery-1.11.3.min.js"></script>
+	<script src="static/bootstrap/js/bootstrap.min.js"></script>
+	<script src="static/js/jquery.countdown.js"></script>
+	<script src="static/js/jquery.isotope-3.0.6.min.js"></script>
+	<script src="static/js/waypoints.js"></script>
+	<script src="static/js/owl.carousel.min.js"></script>
+	<script src="static/js/jquery.magnific-popup.min.js"></script>
+	<script src="static/js/jquery.meanmenu.min.js"></script>
+	<script src="static/js/sticker.js"></script>
+	<script src="static/js/main.js"></script>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </body>
+</html>
