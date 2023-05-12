@@ -10,5 +10,6 @@ urlpatterns=[
     path("result", views.stages,name='result'),
     path("about", views.about, name='about'),
     path("upload",views.upload,name='upload'),
-    path("pdfresult", views.upload,name='pdfresult')
+    path("pdfresult", views.upload,name='pdfresult'),
+    path("Chatbot",views.Chatbot,name="Chatbot")
 ]

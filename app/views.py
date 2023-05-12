@@ -5,6 +5,7 @@ import re
 #import pdfplumber
 from gtts import gTTS
 from urllib.request import Request, urlopen
+from  . Chat.chat_bot import Chatting
 from PyPDF2 import PdfWriter, PdfReader
 from io import BytesIO
 # Create your views here.
@@ -167,4 +168,11 @@ def upload(request):
         return render(request,"pdfresult.html",{'pdfr':text})
 
     return render (request,"upload.html")
+
+
+def Chatbot(request):
+    Chatting()
+    print("Chatting")
+    return render (request,"stages.html")
+
 
